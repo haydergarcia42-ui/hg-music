@@ -4,16 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>HG.MUSIC</title>
 
 <style>
-
-/* ================================
-   CONFIGURACIÓN GENERAL
-================================ */
 
 * {
     box-sizing: border-box;
@@ -81,10 +76,6 @@ body {
 }
 
 
-/* ================================
-   LOGO HG.MUSIC
-================================ */
-
 .logo-text {
 
     font-size: 58px;
@@ -94,7 +85,6 @@ body {
     letter-spacing: 5px;
 
     background:
-
         linear-gradient(
             90deg,
             #1ed760,
@@ -116,74 +106,40 @@ body {
         logoEntrada 1.2s ease,
         logoColores 4s linear infinite;
 
-    filter:
-
-        drop-shadow(
-            0 0 10px
-            rgba(30,215,96,0.6)
-        )
-
-        drop-shadow(
-            0 0 25px
-            rgba(0,255,255,0.3)
-        );
-
 }
 
-
-/* ENTRADA DEL LOGO */
 
 @keyframes logoEntrada {
 
     from {
-
         opacity: 0;
-
-        transform:
-            scale(0.5);
-
+        transform: scale(0.5);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            scale(1);
-
+        transform: scale(1);
     }
 
 }
 
-
-/* COLORES DEL LOGO */
 
 @keyframes logoColores {
 
     0% {
-
         background-position: 0%;
-
     }
 
     50% {
-
         background-position: 100%;
-
     }
 
     100% {
-
         background-position: 0%;
-
     }
 
 }
 
-
-/* ================================
-   ARO DE CARGA
-================================ */
 
 .cargando {
 
@@ -196,49 +152,33 @@ body {
     border-radius: 50%;
 
     border:
-
         5px solid
         rgba(255,255,255,0.15);
 
     border-top:
-
         5px solid #1ed760;
 
     border-right:
-
         5px solid #00ffff;
 
     animation:
-
         cargar 1s linear infinite;
 
 }
 
 
-/* GIRO */
-
 @keyframes cargar {
 
     from {
-
-        transform:
-            rotate(0deg);
-
+        transform: rotate(0deg);
     }
 
     to {
-
-        transform:
-            rotate(360deg);
-
+        transform: rotate(360deg);
     }
 
 }
 
-
-/* ================================
-   TEXTO DE CARGA
-================================ */
 
 .texto-inicio {
 
@@ -253,10 +193,6 @@ body {
 }
 
 
-/* ================================
-   OCULTAR PANTALLA
-================================ */
-
 #inicio.oculto {
 
     opacity: 0;
@@ -267,7 +203,7 @@ body {
 
 
 /* ================================
-   LUCES DEL FONDO
+   FONDO
 ================================ */
 
 body::before {
@@ -340,7 +276,6 @@ header h1 {
     font-size: 38px;
 
     background:
-
         linear-gradient(
             90deg,
             #1ed760,
@@ -358,7 +293,6 @@ header h1 {
     color: transparent;
 
     animation:
-
         colores 4s linear infinite;
 
 }
@@ -367,21 +301,15 @@ header h1 {
 @keyframes colores {
 
     0% {
-
         background-position: 0%;
-
     }
 
     50% {
-
         background-position: 100%;
-
     }
 
     100% {
-
         background-position: 0%;
-
     }
 
 }
@@ -435,54 +363,26 @@ header h1 {
 
     border-radius: 20px;
 
-    background:
+    overflow: hidden;
 
-        linear-gradient(
-            135deg,
-            #1ed760,
-            #7b2cff,
-            #ff0080
-        );
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 80px;
+    background: #222;
 
     box-shadow:
-
         0 10px 40px
         rgba(30,215,96,0.25);
 
 }
 
 
-.portada.reproduciendo {
+.portada img {
 
-    animation:
-        girarPortada 8s linear infinite;
+    width: 100%;
 
-}
+    height: 100%;
 
+    object-fit: cover;
 
-@keyframes girarPortada {
-
-    from {
-
-        transform:
-            rotate(0deg);
-
-    }
-
-    to {
-
-        transform:
-            rotate(360deg);
-
-    }
+    display: block;
 
 }
 
@@ -545,7 +445,6 @@ header h1 {
     border-radius: 20px;
 
     background:
-
         linear-gradient(
             90deg,
             #1ed760,
@@ -553,28 +452,6 @@ header h1 {
             #7b2cff,
             #ff00ff
         );
-
-    background-size: 300%;
-
-    animation:
-        movimiento 3s linear infinite;
-
-}
-
-
-@keyframes movimiento {
-
-    0% {
-
-        background-position: 0%;
-
-    }
-
-    100% {
-
-        background-position: 300%;
-
-    }
 
 }
 
@@ -587,8 +464,7 @@ header h1 {
 
     display: flex;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
     margin-top: 7px;
 
@@ -636,24 +512,8 @@ header h1 {
 
     cursor: pointer;
 
-    transition: 0.3s;
-
 }
 
-
-.boton:hover {
-
-    transform:
-        scale(1.1);
-
-    background: #333;
-
-}
-
-
-/* ================================
-   PLAY
-================================ */
 
 .play {
 
@@ -672,7 +532,6 @@ header h1 {
     cursor: pointer;
 
     background:
-
         linear-gradient(
             135deg,
             #1ed760,
@@ -681,30 +540,14 @@ header h1 {
         );
 
     box-shadow:
-
         0 0 25px
         rgba(30,215,96,0.5);
-
-    transition: 0.3s;
-
-}
-
-
-.play:hover {
-
-    transform:
-        scale(1.12);
-
-    box-shadow:
-
-        0 0 40px
-        rgba(0,255,255,0.7);
 
 }
 
 
 /* ================================
-   LISTA DE CANCIONES
+   LISTA
 ================================ */
 
 .lista {
@@ -743,9 +586,40 @@ header h1 {
 
     border-radius: 15px;
 
-    cursor: pointer;
+    cursor: grab;
 
-    transition: 0.3s;
+    transition:
+        background 0.2s,
+        transform 0.2s,
+        opacity 0.2s;
+
+    user-select: none;
+
+    touch-action: none;
+
+}
+
+
+.cancion:active {
+
+    cursor: grabbing;
+
+}
+
+
+.cancion.arrastrando {
+
+    opacity: 0.45;
+
+    transform: scale(0.98);
+
+}
+
+
+.cancion.destino {
+
+    border:
+        2px solid #1ed760;
 
 }
 
@@ -755,13 +629,12 @@ header h1 {
     background:
         rgba(30,215,96,0.15);
 
-    transform:
-        translateX(5px);
-
 }
 
 
-/* MINI PORTADAS */
+/* ================================
+   MINI PORTADA
+================================ */
 
 .mini-portada {
 
@@ -771,26 +644,27 @@ header h1 {
 
     border-radius: 10px;
 
-    background:
-
-        linear-gradient(
-            135deg,
-            #1ed760,
-            #7b2cff
-        );
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 25px;
+    overflow: hidden;
 
     flex-shrink: 0;
 
 }
 
+
+.mini-portada img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ================================
+   INFORMACIÓN
+================================ */
 
 .info {
 
@@ -819,9 +693,17 @@ header h1 {
 }
 
 
-.play-lista {
+/* ================================
+   ICONO DE ARRASTRAR
+================================ */
+
+.arrastre {
+
+    color: #777;
 
     font-size: 20px;
+
+    padding: 5px;
 
 }
 
@@ -833,43 +715,20 @@ header h1 {
 @media (max-width: 500px) {
 
     .logo-text {
-
         font-size: 42px;
-
-        letter-spacing: 3px;
-
     }
-
-
-    .cargando {
-
-        width: 50px;
-
-        height: 50px;
-
-    }
-
 
     header h1 {
-
         font-size: 30px;
-
     }
-
 
     .portada {
-
         width: 230px;
-
         height: 230px;
-
     }
 
-
     .musica {
-
         padding: 20px;
-
     }
 
 }
@@ -882,62 +741,52 @@ header h1 {
 <body>
 
 
-<!-- =================================
+<!-- ================================
      PANTALLA DE INICIO
-================================= -->
+================================ -->
 
 <div id="inicio">
 
-
     <div class="logo-text">
-
         HG.MUSIC
-
     </div>
-
 
     <div class="cargando"></div>
 
-
     <div class="texto-inicio">
-
         CARGANDO MÚSICA...
-
     </div>
-
 
 </div>
 
 
 
-<!-- =================================
-     MENÚ PRINCIPAL
-================================= -->
+<!-- ================================
+     TÍTULO
+================================ -->
 
 <header>
 
     <h1>
-
         🎵 HG.MUSIC
-
     </h1>
 
 </header>
 
 
 
-<!-- =================================
+<!-- ================================
      REPRODUCTOR
-================================= -->
+================================ -->
 
 <div class="musica">
 
+    <div class="portada">
 
-    <div
-        class="portada"
-        id="portada">
-
-        🎧
+        <img
+            id="portada"
+            src="./portada1.jpg"
+            alt="Portada">
 
     </div>
 
@@ -946,7 +795,7 @@ header h1 {
         class="titulo"
         id="titulo">
 
-        ALÓ
+        yugorcito
 
     </div>
 
@@ -955,17 +804,21 @@ header h1 {
         class="artista"
         id="artista">
 
-        BLESSD ❌ FRONTI ❌ TUTU ❌ JUNH ❌ TURY
+        Mi artista
 
     </div>
 
 
-    <audio id="audio">
+    <audio
+        id="audio"
+        preload="metadata">
 
         <source
             id="archivo"
-            src="cancion.mp3"
+            src="./cancion2.mp3"
             type="audio/mpeg">
+
+        Tu navegador no puede reproducir este audio.
 
     </audio>
 
@@ -979,7 +832,6 @@ header h1 {
         <div
             class="progreso"
             id="progreso">
-
         </div>
 
     </div>
@@ -990,16 +842,11 @@ header h1 {
     <div class="tiempo">
 
         <span id="actual">
-
             0:00
-
         </span>
 
-
         <span id="duracion">
-
             0:00
-
         </span>
 
     </div>
@@ -1008,7 +855,6 @@ header h1 {
     <!-- CONTROLES -->
 
     <div class="controles">
-
 
         <button
             class="boton"
@@ -1037,155 +883,24 @@ header h1 {
 
         </button>
 
-
     </div>
-
 
 </div>
 
 
 
-<!-- =================================
+<!-- ================================
      LISTA
-================================= -->
+================================ -->
 
-<div class="lista">
-
+<div class="lista" id="lista">
 
     <h2>
-
         🎶 Tus canciones
-
     </h2>
 
 
-    <!-- CANCIÓN 1 -->
-
-    <div
-        class="cancion"
-        onclick="cambiarCancion(0)">
-
-
-        <div class="mini-portada">
-
-            🎧
-
-        </div>
-
-
-        <div class="info">
-
-            <div class="nombre">
-
-                ALÓ
-
-            </div>
-
-
-            <div class="artista-lista">
-
-                BLESSD ❌ FRONTI ❌ TUTU ❌ JUNH ❌ TURY
-
-            </div>
-
-        </div>
-
-
-        <div class="play-lista">
-
-            ▶
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- CANCIÓN 2 -->
-
-    <div
-        class="cancion"
-        onclick="cambiarCancion(1)">
-
-
-        <div class="mini-portada">
-
-            🎵
-
-        </div>
-
-
-        <div class="info">
-
-            <div class="nombre">
-
-                yugorcito
-
-            </div>
-
-
-            <div class="artista-lista">
-
-                Mi artista
-
-            </div>
-
-        </div>
-
-
-        <div class="play-lista">
-
-            ▶
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- CANCIÓN 3 -->
-
-    <div
-        class="cancion"
-        onclick="cambiarCancion(2)">
-
-
-        <div class="mini-portada">
-
-            🔥
-
-        </div>
-
-
-        <div class="info">
-
-            <div class="nombre">
-
-                super Star
-
-            </div>
-
-
-            <div class="artista-lista">
-
-                Mi artista
-
-            </div>
-
-        </div>
-
-
-        <div class="play-lista">
-
-            ▶
-
-        </div>
-
-
-    </div>
-
+    <!-- LAS CANCIONES SE CREAN AUTOMÁTICAMENTE -->
 
 </div>
 
@@ -1193,9 +908,10 @@ header h1 {
 
 <script>
 
-/* =================================
-   PANTALLA DE CARGA: 4 SEGUNDOS
-================================= */
+
+/* ================================
+   PANTALLA DE INICIO
+================================ */
 
 setTimeout(function() {
 
@@ -1207,27 +923,17 @@ setTimeout(function() {
 
 
 
-/* =================================
+/* ================================
    CANCIONES
-================================= */
+================================ */
 
-const canciones = [
-
-    {
-
-        archivo: "cancion.mp3",
-
-        nombre: "ALÓ",
-
-        artista:
-        "BLESSD ❌ FRONTI ❌ TUTU ❌ JUNH ❌ TURY"
-
-    },
-
+let canciones = [
 
     {
 
-        archivo: "cancion2.mp3",
+        archivo: "./cancion2.mp3",
+
+        portada: "./portada1.jpg",
 
         nombre: "yugorcito",
 
@@ -1238,11 +944,27 @@ const canciones = [
 
     {
 
-        archivo: "cancion3.mp3",
+        archivo: "./cancion3 (4).mp3",
 
-        nombre: "super Star",
+        portada: "./portada.jpg",
+
+        nombre: "Super Star",
 
         artista: "Mi artista"
+
+    },
+
+
+    {
+
+        archivo: "./cancion.mp3",
+
+        portada: "./portada2 (3).jpg",
+
+        nombre: "ALÓ",
+
+        artista:
+            "BLESSD ❌ FRONTI ❌ TUTU ❌ JUNH ❌ TURY"
 
     }
 
@@ -1252,13 +974,18 @@ const canciones = [
 let indice = 0;
 
 
-/* ELEMENTOS */
+/* ================================
+   ELEMENTOS
+================================ */
 
 const audio =
     document.getElementById("audio");
 
 const archivo =
     document.getElementById("archivo");
+
+const portada =
+    document.getElementById("portada");
 
 const play =
     document.getElementById("play");
@@ -1281,74 +1008,209 @@ const titulo =
 const artista =
     document.getElementById("artista");
 
-const portada =
-    document.getElementById("portada");
+const lista =
+    document.getElementById("lista");
 
 
-/* =================================
-   PLAY / PAUSA
-================================= */
+/* ================================
+   CREAR LISTA
+================================ */
+
+function mostrarLista() {
+
+    lista.innerHTML = `
+        <h2>🎶 Tus canciones</h2>
+    `;
+
+
+    canciones.forEach(function(cancion, numero) {
+
+        const elemento =
+            document.createElement("div");
+
+
+        elemento.className =
+            "cancion";
+
+
+        elemento.dataset.index =
+            numero;
+
+
+        elemento.innerHTML = `
+
+            <div class="mini-portada">
+
+                <img
+                    src="${cancion.portada}"
+                    alt="${cancion.nombre}">
+
+            </div>
+
+
+            <div class="info">
+
+                <div class="nombre">
+                    ${cancion.nombre}
+                </div>
+
+                <div class="artista-lista">
+                    ${cancion.artista}
+                </div>
+
+            </div>
+
+
+            <div class="play-lista">
+                ▶
+            </div>
+
+
+            <div class="arrastre">
+                ☷
+            </div>
+
+        `;
+
+
+        elemento.addEventListener(
+            "click",
+            function() {
+
+                cambiarCancion(
+                    Number(
+                        elemento.dataset.index
+                    )
+                );
+
+            }
+        );
+
+
+        configurarArrastre(
+            elemento
+        );
+
+
+        lista.appendChild(
+            elemento
+        );
+
+    });
+
+}
+
+
+mostrarLista();
+
+
+
+/* ================================
+   REPRODUCIR / PAUSAR
+================================ */
 
 function reproducir() {
 
     if (audio.paused) {
 
-        audio.play();
+        audio.play()
 
-        play.innerHTML = "⏸";
+        .then(function() {
 
-        portada.classList.add(
-            "reproduciendo"
-        );
+            play.innerHTML = "⏸";
 
-    } else {
+        })
+
+        .catch(function(error) {
+
+            console.error(
+                "Error:",
+                error
+            );
+
+            alert(
+                "No se pudo reproducir la canción. Revisa que el archivo esté en la misma carpeta que index.html."
+            );
+
+        });
+
+    }
+
+    else {
 
         audio.pause();
 
         play.innerHTML = "▶";
-
-        portada.classList.remove(
-            "reproduciendo"
-        );
 
     }
 
 }
 
 
-/* =================================
+
+/* ================================
    CAMBIAR CANCIÓN
-================================= */
+================================ */
 
 function cambiarCancion(numero) {
 
     indice = numero;
 
+    audio.pause();
+
+
     archivo.src =
         canciones[indice].archivo;
+
+
+    portada.src =
+        canciones[indice].portada;
+
 
     titulo.innerHTML =
         canciones[indice].nombre;
 
+
     artista.innerHTML =
         canciones[indice].artista;
 
+
+    progreso.style.width = "0%";
+
+    actual.innerHTML = "0:00";
+
+    duracion.innerHTML = "0:00";
+
+
     audio.load();
 
-    audio.play();
 
-    play.innerHTML = "⏸";
+    audio.play()
 
-    portada.classList.add(
-        "reproduciendo"
-    );
+    .then(function() {
+
+        play.innerHTML = "⏸";
+
+    })
+
+    .catch(function(error) {
+
+        console.error(
+            "Error:",
+            error
+        );
+
+        play.innerHTML = "▶";
+
+    });
 
 }
 
 
-/* =================================
+
+/* ================================
    SIGUIENTE
-================================= */
+================================ */
 
 function siguiente() {
 
@@ -1365,9 +1227,10 @@ function siguiente() {
 }
 
 
-/* =================================
+
+/* ================================
    ANTERIOR
-================================= */
+================================ */
 
 function anterior() {
 
@@ -1385,29 +1248,30 @@ function anterior() {
 }
 
 
-/* =================================
-   BARRA DE PROGRESO
-================================= */
+
+/* ================================
+   PROGRESO
+================================ */
 
 audio.addEventListener(
     "timeupdate",
     function() {
 
         if (!audio.duration) {
-
             return;
-
         }
 
-        const porcentaje =
 
+        const porcentaje =
             (
                 audio.currentTime /
                 audio.duration
             ) * 100;
 
+
         progreso.style.width =
             porcentaje + "%";
+
 
         actual.innerHTML =
             convertirTiempo(
@@ -1418,9 +1282,10 @@ audio.addEventListener(
 );
 
 
-/* =================================
+
+/* ================================
    DURACIÓN
-================================= */
+================================ */
 
 audio.addEventListener(
     "loadedmetadata",
@@ -1435,9 +1300,10 @@ audio.addEventListener(
 );
 
 
-/* =================================
+
+/* ================================
    CUANDO TERMINA
-================================= */
+================================ */
 
 audio.addEventListener(
     "ended",
@@ -1449,28 +1315,31 @@ audio.addEventListener(
 );
 
 
-/* =================================
-   CLIC EN LA BARRA
-================================= */
+
+/* ================================
+   BARRA
+================================ */
 
 barra.addEventListener(
     "click",
     function(e) {
 
         if (!audio.duration) {
-
             return;
-
         }
+
 
         const ancho =
             barra.clientWidth;
 
+
         const posicion =
             e.offsetX;
 
+
         const porcentaje =
             posicion / ancho;
+
 
         audio.currentTime =
             porcentaje *
@@ -1480,21 +1349,29 @@ barra.addEventListener(
 );
 
 
-/* =================================
+
+/* ================================
    CONVERTIR TIEMPO
-================================= */
+================================ */
 
 function convertirTiempo(segundos) {
+
+    if (!isFinite(segundos)) {
+        return "0:00";
+    }
+
 
     const minutos =
         Math.floor(
             segundos / 60
         );
 
+
     const segundosRestantes =
         Math.floor(
             segundos % 60
         );
+
 
     return (
 
@@ -1511,6 +1388,245 @@ function convertirTiempo(segundos) {
 
         )
 
+    );
+
+}
+
+
+
+/* =================================================
+   SISTEMA PARA ARRASTRAR CANCIONES
+================================================= */
+
+function configurarArrastre(elemento) {
+
+    let inicioY = 0;
+
+    let moviendo = false;
+
+    let destino = null;
+
+
+    elemento.addEventListener(
+        "pointerdown",
+        function(e) {
+
+            inicioY = e.clientY;
+
+            moviendo = true;
+
+            elemento.classList.add(
+                "arrastrando"
+            );
+
+            elemento.setPointerCapture(
+                e.pointerId
+            );
+
+        }
+    );
+
+
+    elemento.addEventListener(
+        "pointermove",
+        function(e) {
+
+            if (!moviendo) {
+                return;
+            }
+
+
+            const movimiento =
+                e.clientY - inicioY;
+
+
+            const elementos =
+                Array.from(
+                    lista.querySelectorAll(
+                        ".cancion"
+                    )
+                );
+
+
+            elementos.forEach(
+                function(otro) {
+
+                    otro.classList.remove(
+                        "destino"
+                    );
+
+                }
+            );
+
+
+            const actualIndex =
+                elementos.indexOf(
+                    elemento
+                );
+
+
+            if (movimiento > 20) {
+
+                const siguienteElemento =
+                    elementos[
+                        actualIndex + 1
+                    ];
+
+
+                if (siguienteElemento) {
+
+                    destino =
+                        siguienteElemento;
+
+                    destino.classList.add(
+                        "destino"
+                    );
+
+                }
+
+            }
+
+
+            if (movimiento < -20) {
+
+                const anteriorElemento =
+                    elementos[
+                        actualIndex - 1
+                    ];
+
+
+                if (anteriorElemento) {
+
+                    destino =
+                        anteriorElemento;
+
+                    destino.classList.add(
+                        "destino"
+                    );
+
+                }
+
+            }
+
+        }
+    );
+
+
+    elemento.addEventListener(
+        "pointerup",
+        function(e) {
+
+            if (!moviendo) {
+                return;
+            }
+
+
+            moviendo = false;
+
+
+            elemento.classList.remove(
+                "arrastrando"
+            );
+
+
+            const elementos =
+                Array.from(
+                    lista.querySelectorAll(
+                        ".cancion"
+                    )
+                );
+
+
+            elementos.forEach(
+                function(otro) {
+
+                    otro.classList.remove(
+                        "destino"
+                    );
+
+                }
+            );
+
+
+            if (destino) {
+
+                const desde =
+                    elementos.indexOf(
+                        elemento
+                    );
+
+
+                const hasta =
+                    elementos.indexOf(
+                        destino
+                    );
+
+
+                if (
+                    desde !== -1 &&
+                    hasta !== -1 &&
+                    desde !== hasta
+                ) {
+
+                    const cancionMovida =
+                        canciones.splice(
+                            desde,
+                            1
+                        )[0];
+
+
+                    canciones.splice(
+                        hasta,
+                        0,
+                        cancionMovida
+                    );
+
+
+                    /*
+                     * Mantener la canción
+                     * que está sonando.
+                     */
+
+                    const cancionActual =
+                        canciones[indice];
+
+
+                    const nuevaPosicion =
+                        canciones.indexOf(
+                            cancionActual
+                        );
+
+
+                    indice =
+                        nuevaPosicion;
+
+
+                    mostrarLista();
+
+                }
+
+            }
+
+
+            destino = null;
+
+        }
+    );
+
+
+    elemento.addEventListener(
+        "pointercancel",
+        function() {
+
+            moviendo = false;
+
+            elemento.classList.remove(
+                "arrastrando"
+            );
+
+            destino = null;
+
+        }
     );
 
 }
